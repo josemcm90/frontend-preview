@@ -1,0 +1,220 @@
+.swiper-container
+	margin 0 auto
+	backface-visibility hidden
+	z-index 1
+
+	.slider-prev
+	.slider-next
+		background-color rgba(0, 0, 0, 0.4)
+		border-radius 0 4px 4px 0
+		color #FFFFFF
+		height 54px
+		position absolute
+		top 50%
+		transition background-color 0.2s linear 0s
+		width 40px
+		z-index 120
+
+		&:hover
+			background-color rgba(0,0,0,0.8)
+			
+		&:active
+		&:focus
+			outline 0
+
+		i
+			font-size 24px
+			background-color transparent!important
+			line-height 54px
+
+			&:active
+			&:focus
+				outline 0
+
+	.slider-prev
+		left 0
+		padding-right 4px
+		opacity 1
+
+		& > i
+			position absolute
+			padding-right 0px 
+			left 14px 
+
+	.slider-next
+		right 0px 
+		padding-left 4px
+		opacity 1
+
+		& > i
+			position absolute 
+			right 14px 
+			left auto
+
+	.slider-pagination 
+		position absolute
+		z-index 20
+		bottom 25px
+		display block
+		width 100%
+		text-align center
+		opacity 1
+
+		.swiper-pagination-switch 
+			border 1px solid #fff
+			background-color transparent
+			border-radius 10px 10px 10px 10px
+			cursor pointer
+			display inline-block
+			height 10px
+			margin 0 4px
+			width 10px
+			transition background-color 0.2s linear, border-color 0.2s linear
+
+			&:hover 
+				background-color #fff
+
+
+		.swiper-active-switch 
+			background none repeat scroll 0 0 #FFFFFF
+
+.swiper-wrapper 
+	position relative
+	width 100%
+	transition-property transform, left, top
+	transition-duration 0s
+	transform translate3d(0px,0,0)
+	transition-timing-function ease
+
+.swiper-container
+.swiper-slide 
+	width 100%
+	height 700px
+	overflow hidden
+	position relative
+
+.swiper-slide
+	background-position center
+	background-repeat no-repeat
+	background-size cover
+	float left
+
+	img
+		display block
+		margin 0 auto
+
+	.buttons
+		padding-top 25px
+
+	.container
+		width 98%
+		max-width 1200px
+		margin 0 auto
+		position relative
+
+	.content 
+		color #fff
+		left 0px
+		padding 0 35px
+		position absolute
+		top 150px
+		width 100%
+		z-index 200
+
+		p
+		h2
+			padding-top 25px
+			letter-spacing 0.5px
+			font-smoothing antialiased
+			z-index 140px
+			position relative
+
+		img
+			margin-bottom 30px
+
+		h2
+			font-size 60px
+			line-height 80px
+			margin 0
+			letter-spacing -1px
+			display block
+			color #fff
+			
+		p
+			font-size 24px
+			line-height 38px
+
+		.centered
+			text-align center
+
+	.video-wrap 
+		position absolute
+		top 0
+		left 0
+		height 100%
+		width 100%
+		overflow hidden
+		
+		video 
+			top 0px
+			width 100%
+			position relative
+			-webkit-backface-visibility hidden
+
+	.video-texture 
+		height 100%
+		width 100%
+		position absolute
+		left 0px
+		top 0px
+		opacity 0.7
+		z-index 10
+
+
+	.active_texture 
+		background-image url(../img/textures/grid.png)
+
+
+
+.swiper-slide[data-bg-alignment="top"]
+	background-position center top
+
+.swiper-slide[data-bg-alignment="center"]
+	background-position center center
+
+.swiper-slide[data-bg-alignment="bottom"]
+	background-position center bottom
+
+
+.swiper-slide[data-x-pos="left"] .content 
+	text-align left
+
+
+.swiper-slide[data-x-pos="left"] .content p 
+	margin 0px
+
+
+.swiper-slide[data-x-pos="centered"] .content 
+	text-align center
+
+
+.swiper-slide[data-x-pos="right"] .content 
+	width 50%
+	left auto
+	right 0px
+
+
+.swiper-slide[data-x-pos="right"] .content p 
+	margin 0px
+
+
+.swiper-slide[data-x-pos="right"] .content .buttons 
+	clear both
+
+
+.swiper-slide[data-x-pos="right"] .content p:after 
+	content "" 
+	display block 
+	height 0 
+	clear both 
+	visibility hidden

@@ -1,0 +1,46 @@
+.btn 
+	display inline-block
+	background-image none
+	border 1px solid transparent
+	border-radius 2px
+	cursor pointer
+	margin-bottom 0
+	padding 12px 20px
+	user-select none
+	text-align center
+	text-decoration none
+	vertical-align middle
+	white-space nowrap
+
+
+	&:focus 
+		outline thin dotted
+		outline 5px auto -webkit-focus-ring-color
+		outline-offset -2px
+
+
+	&:hover
+	&:focus 
+		color #333333
+
+	&:active
+	&.active 
+		background-image none
+		outline 0
+		box-shadow inset 0 3px 5px rgba(0, 0, 0, 0.125)
+
+	&.solid_color
+		background-color $main_color
+		color #fff
+
+		&:hover
+			background-color $main_color_dark
+
+	&.transparent
+		border 2px solid #fff
+		color #fff
+
+		&:hover
+			background-color #fff
+			color #333
+
